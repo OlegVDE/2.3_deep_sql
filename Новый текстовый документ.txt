@@ -1,0 +1,21 @@
+CREATE TABLE Customers (
+CostumerID int PRIMARY KEY,
+FirstName varchar,
+LastName varchar,
+Email varchar
+);
+
+CREATE TABLE Orders (
+OrderID int PRIMARY KEY,
+CustomerID int,
+OrderDate datetime,
+TotalAmount decimal
+);
+
+CREATE TABLE OrderDetails (
+OrderDetailID int PRIMARY KEY,
+OrderID int,
+ProductID int,
+Quantity int,
+UnitPrice decimal
+);
